@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      
+      <title>Dice Game Exercise</title>
+      
+      <script src="dice_game.js"></script>
+
+      <style>
+         .diceFace {
+            color: black;
+            font-size: xx-large;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Sans-Serif;
+         }
+         h1{text-align: center;}
+         .button_display{text-align: center;}
+         select{background-color: grey; width: 200px; height: 50px; text-align: center;}
+         #rollAll{background-color: green; border:none; text-align: center; width: 200px; height: 50px; cursor: pointer; color: white}
+         table{margin-left: auto;margin-right: auto;}
+         td{border:solid; width: 100px; height: 100px; text-align: center;}
+         #showResults{margin-left: 30%;margin-right: 30%;}
+      
+      </style>
+
+   </head>
+
+   <body onload="setupDice();">
+
+      <h1>Dice</h1>
+
+      <table>
+         <tbody><tr id="showDice">
+            
+            <!--<td id="dice0" class="diceFace"></td><td id="dice1" class="diceFace"></td><td id="dice2" class="diceFace"></td></tr>-->
+      </tbody></table>
+
+      <br>
+
+      <div class = "button_display">
+      
+         <select id="dices" onchange="setupDice()">
+            <option value=3>Dice Number: 3</option>
+            <option value=4>Dice Number: 4</option>
+            <option value=5>Dice Number: 5</option>
+            <option value=6>Dice Number: 6</option>
+      </select>
+
+      <button id="rollAll" onclick="rollAllDice()">Roll all dice</button>
+
+      </div> 
+
+      <br>
+
+      <div id="showResults">
+         
+      </div>
+
+   
+
+</body></html>
